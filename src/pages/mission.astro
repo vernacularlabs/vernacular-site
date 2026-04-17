@@ -37,14 +37,20 @@ import Layout from '../layouts/Layout.astro';
       </article>
 
       <article class="p-8 md:p-10 rounded-2xl bg-paper md:col-span-2">
-        <h2 class="font-serif text-[clamp(1.4rem,2.4vw,1.85rem)] leading-tight mb-4">Centering people</h2>
-        <p class="prose-body">
-          People share their stories with us not just to be heard, but to shape a better world
-          &mdash; for themselves, their families, and their neighbors. We conduct interviews in many
-          languages, across diverse communities, with empathy and respect at the core. The result
-          is a more accurate and inclusive picture of what people care about &mdash; one that informs
-          smarter decisions, better storytelling, and more human engagement.
-        </p>
+        <div class="grid md:grid-cols-12 gap-6 md:gap-10 items-start">
+          <div class="md:col-span-5">
+            <h2 class="font-serif text-[clamp(1.4rem,2.4vw,1.85rem)] leading-tight">Centering people</h2>
+          </div>
+          <div class="md:col-span-7">
+            <p class="prose-body">
+              People share their stories with us not just to be heard, but to shape a better world
+              &mdash; for themselves, their families, and their neighbors. We conduct interviews in many
+              languages, across diverse communities, with empathy and respect at the core. The result
+              is a more accurate and inclusive picture of what people care about &mdash; one that informs
+              smarter decisions, better storytelling, and more human engagement.
+            </p>
+          </div>
+        </div>
       </article>
 
     </div>
@@ -54,7 +60,7 @@ import Layout from '../layouts/Layout.astro';
   <section class="container-site mt-16">
     <div class="border-l-2 border-terracotta pl-8 md:pl-12 max-w-3xl">
       <p class="font-serif text-[clamp(1.5rem,2.6vw,2rem)] leading-[1.25] text-ink">
-        &ldquo;Polls tell you the score. They don&rsquo;t tell you the game.&rdquo;
+        Polls tell you the score. They don&rsquo;t tell you the game.
       </p>
       <p class="prose-body mt-6">
         A poll can tell you 58% of voters in a district support a policy &mdash; but not whether that
