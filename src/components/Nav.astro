@@ -1,0 +1,52 @@
+---
+import Logo from './Logo.astro';
+const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/products', label: 'What we do' },
+  { href: '/mission', label: 'Why it matters' },
+  { href: '/people', label: 'Who we are' },
+  { href: '/contact', label: 'Contact' },
+];
+---
+<header class="border-b border-fog/30 bg-cream/80 backdrop-blur-sm sticky top-0 z-30">
+  <div class="container-site flex items-center justify-between py-5">
+    <a href="/" class="flex items-center gap-3 text-ink" aria-label="Vernacular Labs home">
+      <Logo class="h-9 w-9 text-ink" />
+      <span class="hidden sm:inline font-serif text-[20px] tracking-tight">Vernacular Labs</span>
+    </a>
+    <nav class="hidden md:block" aria-label="Main">
+      <ul class="flex items-center gap-8">
+        {links.slice(1).map((l) => (
+          <li>
+            <a
+              href={l.href}
+              class={`nav-link ${pathname === l.href ? 'nav-link-active' : ''}`}
+            >{l.label}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    
+    <details class="relative md:hidden">
+      <summary class="list-none cursor-pointer p-2 -mr-2 text-ink">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7"/>
+          <line x1="4" y1="12" x2="20" y2="12"/>
+          <line x1="4" y1="17" x2="20" y2="17"/>
+        </svg>
+      </summary>
+      <ul class="absolute right-0 mt-2 w-56 rounded-lg border border-fog/40 bg-cream shadow-lg py-2">
+        {links.map((l) => (
+          <li>
+            <a
+              href={l.href}
+              class={`block px-4 py-2 text-[15px] ${pathname === l.href ? 'text-terracotta' : 'text-coal'} hover:bg-paper`}
+            >{l.label}</a>
+          </li>
+        ))}
+      </ul>
+    </details>
+  </div>
+</header>

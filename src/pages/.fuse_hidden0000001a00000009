@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Who we are" description="The Vernacular Labs team brings together statistical methodology, political data science, and years of campaign analytics experience.">
+
+  <section class="container-site pt-14 md:pt-20 pb-10">
+    <p class="eyebrow mb-4">Our Team</p>
+    <h1 class="font-serif text-[clamp(2.25rem,5vw,4rem)] leading-[1.05] tracking-[-0.02em] max-w-4xl">
+      Researchers and practitioners &mdash; who have been <em>doing</em> this work.
+    </h1>
+  </section>
+
+  <section class="container-site pb-10">
+    <div class="grid md:grid-cols-12 gap-10 md:gap-14 items-start">
+      <div class="md:col-span-7">
+        <p class="prose-body mb-6">
+          Vernacular Labs was founded by researchers and practitioners with deep roots in
+          political data science, statistical methodology, and Democratic campaign analytics.
+        </p>
+        <p class="prose-body mb-6">
+          Our team&rsquo;s work has been published in leading academic journals and has shaped data
+          strategy for campaigns and organizations across the country.
+        </p>
+        <p class="prose-body italic text-ash">
+          Full team bios coming soon.
+        </p>
+      </div>
+      <div class="md:col-span-5">
+        <img
+          src="/images/who-we-are-team.jpg"
+          alt="A small, diverse team working together"
+          class="w-full rounded-2xl shadow-[0_20px_60px_-30px_rgba(30,20,10,0.3)]"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="container-site mt-20">
+    <div class="border-t border-fog/40 pt-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <p class="font-serif text-[22px] text-ink">Want to know more?</p>
+      <a href="/contact" class="btn-primary">Get in touch</a>
+    </div>
+  </section>
+
+</Layout>

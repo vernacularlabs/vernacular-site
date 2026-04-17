@@ -1,0 +1,127 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Vernacular Labs" description="Using AI to understand real people. Vernacular Labs conducts AI-led voice interviews at scale, producing population-representative estimates of what communities think and why.">
+
+  
+  <section class="relative overflow-hidden">
+    <div class="container-site pt-10 md:pt-16 pb-12 md:pb-20">
+      <div class="relative rounded-[20px] overflow-hidden shadow-[0_30px_80px_-40px_rgba(30,20,10,0.5)]">
+        <img
+          src="/images/hero-waveform.jpg"
+          alt="A double-exposure crowd of human figures forming a warm blue-to-red waveform"
+          class="w-full h-[420px] md:h-[560px] lg:h-[640px] object-cover"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-br from-ink/55 via-ink/20 to-transparent"></div>
+        <div class="absolute inset-0 flex items-end">
+          <div class="p-8 md:p-14 lg:p-20 text-cream max-w-3xl">
+            <p class="eyebrow text-cream/80 mb-4">Vernacular Labs</p>
+            <h1 class="font-serif text-[clamp(2rem,5vw,4.25rem)] leading-[1.05] tracking-[-0.02em] text-cream">
+              Using AI to understand<br class="hidden sm:inline" />
+              <span class="italic">real</span> people.
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="container-site pb-6">
+    <div class="grid gap-20 md:gap-28">
+
+      
+      <article class="grid md:grid-cols-12 gap-8 md:gap-12 items-center">
+        <div class="md:col-span-6 order-2 md:order-1">
+          <p class="eyebrow mb-3">What we do</p>
+          <h2 class="font-serif text-[clamp(1.75rem,3.2vw,2.5rem)] leading-tight mb-5">
+            AI voice agents that have real conversations &mdash; not surveys.
+          </h2>
+          <p class="prose-body mb-6">
+            We build AI voice agents that call people on the phone and have real conversations &mdash;
+            not surveys, not chatbots. These thousands of in-depth interviews feed into multilevel
+            regression and poststratification (MRP) models that produce granular, representative
+            estimates of what communities think and why.
+          </p>
+          <a href="/products" class="btn-ghost">How it works &rarr;</a>
+        </div>
+        <div class="md:col-span-6 order-1 md:order-2">
+          <img
+            src="/images/what-we-do-cafe.jpg"
+            alt="Two people in conversation at a warm outdoor setting"
+            class="w-full rounded-2xl shadow-[0_20px_60px_-30px_rgba(30,20,10,0.3)]"
+            loading="lazy"
+          />
+        </div>
+      </article>
+
+      
+      <article class="grid md:grid-cols-12 gap-8 md:gap-12 items-center">
+        <div class="md:col-span-6">
+          <img
+            src="/images/why-it-matters-family.jpg"
+            alt="A family outside their home in an everyday moment"
+            class="w-full rounded-2xl shadow-[0_20px_60px_-30px_rgba(30,20,10,0.3)]"
+            loading="lazy"
+          />
+        </div>
+        <div class="md:col-span-6">
+          <p class="eyebrow mb-3">Why it matters</p>
+          <h2 class="font-serif text-[clamp(1.75rem,3.2vw,2.5rem)] leading-tight mb-5">
+            Real understanding begins with conversation.
+          </h2>
+          <p class="prose-body mb-6">
+            In a divided world, traditional tools miss the nuance, emotion, and context behind
+            what people believe. We use AI to listen at scale, with humility and care, turning
+            voices into insight that reflects the full complexity of our communities.
+          </p>
+          <a href="/mission" class="btn-ghost">Our mission &rarr;</a>
+        </div>
+      </article>
+
+      
+      <article class="grid md:grid-cols-12 gap-8 md:gap-12 items-center">
+        <div class="md:col-span-6 order-2 md:order-1">
+          <p class="eyebrow mb-3">Who we are</p>
+          <h2 class="font-serif text-[clamp(1.75rem,3.2vw,2.5rem)] leading-tight mb-5">
+            Built by researchers who have been doing this work for years.
+          </h2>
+          <p class="prose-body mb-6">
+            Our team brings together doctoral-level expertise in statistical modeling, years of
+            experience building national-scale political data infrastructure, and deep roots in
+            Democratic campaigns and committees at every level.
+          </p>
+          <a href="/people" class="btn-ghost">Meet the team &rarr;</a>
+        </div>
+        <div class="md:col-span-6 order-1 md:order-2">
+          <img
+            src="/images/who-we-are-team.jpg"
+            alt="A small, diverse team working together"
+            class="w-full rounded-2xl shadow-[0_20px_60px_-30px_rgba(30,20,10,0.3)]"
+            loading="lazy"
+          />
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  
+  <section class="container-site mt-24">
+    <div class="rounded-3xl bg-ink text-cream p-10 md:p-16 text-center">
+      <p class="eyebrow text-cream/70 mb-4">Get in touch</p>
+      <h2 class="font-serif text-[clamp(1.75rem,3vw,2.5rem)] leading-tight mb-5 text-cream">
+        Working on 2026 or 2028?<br/>
+        <span class="text-clay">Let&rsquo;s talk.</span>
+      </h2>
+      <p class="max-w-xl mx-auto text-cream/80 mb-8">
+        We&rsquo;re running pilot projects with mission-aligned partners ahead of a broader launch.
+      </p>
+      <a href="/contact" class="inline-flex items-center justify-center rounded-full bg-cream px-7 py-3 text-[15px] font-medium text-ink hover:bg-clay hover:text-cream transition-colors">
+        Contact us
+      </a>
+    </div>
+  </section>
+
+</Layout>
