@@ -23,3 +23,6 @@ pnpm-debug.log*
 
 # Astro
 .astro/
+
+# FUSE filesystem temp files (deleted-but-open files on mounted filesystems)
+.fuse_hidden*

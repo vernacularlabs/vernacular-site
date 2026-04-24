@@ -1,9 +1,0 @@
----
-interface Props {
-  class?: string;
-  title?: string;
-}
-const { class: klass = 'h-10 w-10 text-ink', title = 'Vernacular Labs' } = Astro.props;
-import logo from '../assets/logo.svg?raw';
----
-<span class={klass} aria-label={title} role="img" set:html={logo.replace('<svg ', '<svg style="width:100%;height:100%;display:block" ')}></span>
