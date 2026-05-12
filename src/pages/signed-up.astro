@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="You're signed up" description="Thanks for signing up to receive text messages from Vernacular Labs.">
+  <section class="container-site pt-20 md:pt-28 pb-20 min-h-[50vh] flex items-center">
+    <div class="max-w-2xl">
+      <p class="eyebrow mb-4">You're in</p>
+      <h1 class="font-serif text-[clamp(2rem,4.5vw,3.25rem)] leading-[1.1] tracking-[-0.02em]">
+        You're signed up.
+      </h1>
+      <p class="prose-body mt-6">
+        We'll send you a text when we have an upcoming survey. It won't be often —
+        just when we have something worth your time.
+        Reply <em>STOP</em> at any time to opt out.
+      </p>
+      <p class="prose-body mt-4">
+        In the meantime, feel free to
+        <a href="/mission" class="text-terracotta hover:text-ember underline underline-offset-4 decoration-terracotta/30">learn more about our research</a>
+        or <a href="/" class="text-terracotta hover:text-ember underline underline-offset-4 decoration-terracotta/30">return to the home page</a>.
+      </p>
+    </div>
+  </section>
+</Layout>
