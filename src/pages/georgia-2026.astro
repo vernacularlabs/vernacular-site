@@ -1,55 +1,71 @@
 ---
-// Unlisted verification page for a text-message recruitment campaign.
+// Unlisted verification/disclosure page for a text-message recruitment campaign.
 // Not linked from nav/footer/sitemap by design — see build brief.
+// This is a verification page, not a conversion page: no phone number, no CTA.
 // NOTE: copy here (and the recruitment SMS itself) needs a legal read
 // before this page is published/deployed. Do not merge/deploy until reviewed.
 import Layout from '../layouts/Layout.astro';
 
-const PHONE = '[PHONE NUMBER]';
-const PHONE_HREF = `tel:${PHONE}`;
-const DURATION = '[DURATION]';
-const HOURS = '[HOURS]';
+// Single source of truth for call length — may be revised after the pilot.
+// Must always match the recruitment text message and the interviewer's opening.
+const DURATION = '30 minutes';
+
+const sections = [
+  { id: 'what-this-is', label: 'What this is' },
+  { id: 'who-we-are', label: 'Who we are' },
+  { id: 'the-conversation', label: 'What the conversation is like' },
+  { id: 'how-long', label: 'How long it takes' },
+  { id: 'what-it-involves', label: 'What taking part involves' },
+  { id: 'language', label: 'Language' },
+  { id: 'how-to-take-part', label: 'How to take part' },
+  { id: 'confidentiality', label: 'Confidentiality' },
+  { id: 'not-this', label: 'What this is not' },
+  { id: 'compensation', label: 'Compensation' },
+  { id: 'text-messages', label: 'Text messages' },
+  { id: 'questions', label: 'Questions' },
+];
 ---
 <Layout
-  title="Study Verification"
-  description="Verify this pilot study on public opinion about elections and learn how to take part."
+  title="Study Information"
+  description="What this pilot study is, who's behind it, and what taking part involves."
   noindex={true}
 >
 
   <section class="container-site pt-10 md:pt-14 pb-8">
     <p class="eyebrow mb-4">Pilot Study</p>
     <h1 class="font-serif text-[clamp(1.85rem,6vw,2.75rem)] leading-[1.1] tracking-[-0.02em] max-w-xl">
-      A short research call from Vernacular Labs.
+      About this pilot study.
     </h1>
     <p class="prose-body mt-5 max-w-xl">
-      If you received a text message about this study, this page confirms it&rsquo;s real.
-      Here&rsquo;s what it is and how to take part.
+      If you received a text message about this study, this page answers the questions
+      you probably have before calling in &mdash; what it is, who&rsquo;s behind it, and what
+      taking part involves.
     </p>
 
-    <div class="mt-8 p-6 rounded-2xl bg-paper border border-fog/40">
-      <p class="text-[13px] font-medium text-ash uppercase tracking-[0.14em] mb-2">Call to take part</p>
-      <a
-        href={PHONE_HREF}
-        class="font-serif text-[clamp(1.6rem,7vw,2.25rem)] leading-none tracking-[-0.01em] text-terracotta hover:text-ember"
-      >{PHONE}</a>
-      <p class="prose-body mt-3 text-[15px]">
-        Available {HOURS}.
-      </p>
-    </div>
+    <nav aria-label="Jump to a section" class="mt-8 p-5 rounded-2xl bg-paper border border-fog/40">
+      <p class="text-[13px] font-medium text-ash uppercase tracking-[0.14em] mb-3">Jump to a question</p>
+      <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+        {sections.map((s) => (
+          <li>
+            <a href={`#${s.id}`} class="text-[15px] text-coal hover:text-terracotta underline underline-offset-4 decoration-fog">{s.label}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   </section>
 
-  <section class="container-site pb-10">
+  <section class="container-site pb-16">
     <div class="grid gap-8 max-w-2xl">
 
-      <article>
+      <article id="what-this-is">
         <h2 class="font-serif text-[clamp(1.2rem,2.2vw,1.5rem)] leading-tight mb-3">What this is</h2>
         <p class="prose-body">
-          This is a short pilot study conducted by Vernacular Labs on public opinion about
-          elections. It is research only.
+          This is a pilot study by Vernacular Labs on public opinion about elections and
+          politics. It is research only.
         </p>
       </article>
 
-      <article>
+      <article id="who-we-are">
         <h2 class="font-serif text-[clamp(1.2rem,2.2vw,1.5rem)] leading-tight mb-3">Who we are</h2>
         <p class="prose-body">
           Vernacular Labs is a research firm. You can look around our main site at
@@ -58,59 +74,98 @@ const HOURS = '[HOURS]';
         </p>
       </article>
 
-      <article>
+      <article id="the-conversation">
+        <h2 class="font-serif text-[clamp(1.2rem,2.2vw,1.5rem)] leading-tight mb-3">What the conversation is like</h2>
+        <p class="prose-body">
+          It&rsquo;s an open-ended conversation about how you think about politics and the
+          country right now &mdash; in your own words. It touches on how you&rsquo;d describe
+          yourself politically, how you&rsquo;ve voted and how you feel about that today, your
+          views of the parties, the issues that matter most to you, the current
+          administration, and where you get your news. It closes with a few standard
+          background questions &mdash; things like age, race, income, religion, and zip code
+          &mdash; used to check that the group of people we talk to matches the broader
+          population.
+        </p>
+        <p class="prose-body mt-4">
+          This is not a survey with fixed answer choices. There are no right answers, and
+          the interviewer won&rsquo;t argue with you or push a position.
+        </p>
+      </article>
+
+      <article id="how-long">
+        <h2 class="font-serif text-[clamp(1.2rem,2.2vw,1.5rem)] leading-tight mb-3">How long it takes</h2>
+        <p class="prose-body">
+          The call takes up to {DURATION}.
+        </p>
+      </article>
+
+      <article id="what-it-involves">
         <h2 class="font-serif text-[clamp(1.2rem,2.2vw,1.5rem)] leading-tight mb-3">What taking part involves</h2>
         <p class="prose-body">
-          Taking part means a phone interview, roughly {DURATION}, conducted by an AI
-          interviewer. The call is recorded and transcribed. Taking part is voluntary &mdash;
-          you can stop at any time or decline to answer any question.
+          The interview is conducted by an AI interviewer, not a person. The call is
+          recorded and transcribed. Taking part is voluntary &mdash; you can decline any
+          question, and you can end the call at any time.
         </p>
       </article>
 
-      <article>
+      <article id="language">
+        <h2 class="font-serif text-[clamp(1.2rem,2.2vw,1.5rem)] leading-tight mb-3">Language</h2>
+        <p class="prose-body">
+          The interview is conducted in English by default. If you&rsquo;d rather continue in
+          another language, just ask &mdash; the interviewer can continue in that language.
+        </p>
+      </article>
+
+      <article id="how-to-take-part">
         <h2 class="font-serif text-[clamp(1.2rem,2.2vw,1.5rem)] leading-tight mb-3">How to take part</h2>
         <p class="prose-body">
-          Call <a href={PHONE_HREF} class="text-terracotta hover:text-ember underline underline-offset-4 decoration-terracotta/30">{PHONE}</a>.
-          The line is answered {HOURS}.
+          Call the number in the text message you received, from the phone that received
+          it &mdash; that helps us match your call back to the study correctly. The line
+          answers any time, day or night.
         </p>
       </article>
 
-      <article>
+      <article id="confidentiality">
         <h2 class="font-serif text-[clamp(1.2rem,2.2vw,1.5rem)] leading-tight mb-3">Confidentiality</h2>
         <p class="prose-body">
-          Your responses are confidential. Results are reported only in aggregate, and your
-          identity is not attached to anything we publish.
+          Your responses are confidential. Results are reported only in aggregate, your
+          identity is not attached to anything we publish, and nothing you share is sold
+          or used for marketing.
         </p>
       </article>
 
-      <article>
+      <article id="not-this">
         <h2 class="font-serif text-[clamp(1.2rem,2.2vw,1.5rem)] leading-tight mb-3">What this is not</h2>
         <p class="prose-body">
-          This is not a campaign, not fundraising, and not a sales call. Nothing is being sold.
+          This is not a campaign, not fundraising, and not a sales call. Nothing is being
+          sold.
         </p>
       </article>
 
-      <article>
+      <article id="compensation">
+        <h2 class="font-serif text-[clamp(1.2rem,2.2vw,1.5rem)] leading-tight mb-3">Compensation</h2>
+        <p class="prose-body">
+          There is no payment for taking part in this round.
+        </p>
+      </article>
+
+      <article id="text-messages">
         <h2 class="font-serif text-[clamp(1.2rem,2.2vw,1.5rem)] leading-tight mb-3">Text messages</h2>
         <p class="prose-body">
           Reply STOP to any message you received to opt out.
         </p>
       </article>
 
-      <article>
-        <h2 class="font-serif text-[clamp(1.2rem,2.2vw,1.5rem)] leading-tight mb-3">Questions</h2>
+      <article id="questions" class="p-6 md:p-8 rounded-2xl bg-paper border border-fog/40">
+        <h2 class="font-serif text-[clamp(1.3rem,2.4vw,1.65rem)] leading-tight mb-3">Questions</h2>
         <p class="prose-body">
-          Write to <a href="mailto:info@vernacularlabs.ai" class="text-terracotta hover:text-ember underline underline-offset-4 decoration-terracotta/30">info@vernacularlabs.ai</a>.
+          Write to <a href="mailto:info@vernacularlabs.ai" class="text-terracotta hover:text-ember underline underline-offset-4 decoration-terracotta/30 font-medium">info@vernacularlabs.ai</a>
+          with anything &mdash; who&rsquo;s behind this, how the data is used, or anything else
+          on this page. The interviewer on the call won&rsquo;t be able to speak to these
+          questions, so this inbox is the place to ask them.
         </p>
       </article>
 
-    </div>
-  </section>
-
-  <section class="container-site pb-16">
-    <div class="border-t border-fog/40 pt-8 max-w-2xl">
-      <p class="prose-body text-[15px] text-ash mb-2">Ready to take part?</p>
-      <a href={PHONE_HREF} class="btn-primary">Call {PHONE}</a>
     </div>
   </section>
 
