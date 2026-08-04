@@ -1,0 +1,117 @@
+---
+// Unlisted verification page for a text-message recruitment campaign.
+// Not linked from nav/footer/sitemap by design — see build brief.
+// NOTE: copy here (and the recruitment SMS itself) needs a legal read
+// before this page is published/deployed. Do not merge/deploy until reviewed.
+import Layout from '../layouts/Layout.astro';
+
+const PHONE = '[PHONE NUMBER]';
+const PHONE_HREF = `tel:${PHONE}`;
+const DURATION = '[DURATION]';
+const HOURS = '[HOURS]';
+---
+<Layout
+  title="Study Verification"
+  description="Verify this pilot study on public opinion about elections and learn how to take part."
+  noindex={true}
+>
+
+  <section class="container-site pt-10 md:pt-14 pb-8">
+    <p class="eyebrow mb-4">Pilot Study</p>
+    <h1 class="font-serif text-[clamp(1.85rem,6vw,2.75rem)] leading-[1.1] tracking-[-0.02em] max-w-xl">
+      A short research call from Vernacular Labs.
+    </h1>
+    <p class="prose-body mt-5 max-w-xl">
+      If you received a text message about this study, this page confirms it&rsquo;s real.
+      Here&rsquo;s what it is and how to take part.
+    </p>
+
+    <div class="mt-8 p-6 rounded-2xl bg-paper border border-fog/40">
+      <p class="text-[13px] font-medium text-ash uppercase tracking-[0.14em] mb-2">Call to take part</p>
+      <a
+        href={PHONE_HREF}
+        class="font-serif text-[clamp(1.6rem,7vw,2.25rem)] leading-none tracking-[-0.01em] text-terracotta hover:text-ember"
+      >{PHONE}</a>
+      <p class="prose-body mt-3 text-[15px]">
+        Available {HOURS}.
+      </p>
+    </div>
+  </section>
+
+  <section class="container-site pb-10">
+    <div class="grid gap-8 max-w-2xl">
+
+      <article>
+        <h2 class="font-serif text-[clamp(1.2rem,2.2vw,1.5rem)] leading-tight mb-3">What this is</h2>
+        <p class="prose-body">
+          This is a short pilot study conducted by Vernacular Labs on public opinion about
+          elections. It is research only.
+        </p>
+      </article>
+
+      <article>
+        <h2 class="font-serif text-[clamp(1.2rem,2.2vw,1.5rem)] leading-tight mb-3">Who we are</h2>
+        <p class="prose-body">
+          Vernacular Labs is a research firm. You can look around our main site at
+          <a href="/" class="text-terracotta hover:text-ember underline underline-offset-4 decoration-terracotta/30">vernacularlabs.ai</a>
+          to learn more about our work.
+        </p>
+      </article>
+
+      <article>
+        <h2 class="font-serif text-[clamp(1.2rem,2.2vw,1.5rem)] leading-tight mb-3">What taking part involves</h2>
+        <p class="prose-body">
+          Taking part means a phone interview, roughly {DURATION}, conducted by an AI
+          interviewer. The call is recorded and transcribed. Taking part is voluntary &mdash;
+          you can stop at any time or decline to answer any question.
+        </p>
+      </article>
+
+      <article>
+        <h2 class="font-serif text-[clamp(1.2rem,2.2vw,1.5rem)] leading-tight mb-3">How to take part</h2>
+        <p class="prose-body">
+          Call <a href={PHONE_HREF} class="text-terracotta hover:text-ember underline underline-offset-4 decoration-terracotta/30">{PHONE}</a>.
+          The line is answered {HOURS}.
+        </p>
+      </article>
+
+      <article>
+        <h2 class="font-serif text-[clamp(1.2rem,2.2vw,1.5rem)] leading-tight mb-3">Confidentiality</h2>
+        <p class="prose-body">
+          Your responses are confidential. Results are reported only in aggregate, and your
+          identity is not attached to anything we publish.
+        </p>
+      </article>
+
+      <article>
+        <h2 class="font-serif text-[clamp(1.2rem,2.2vw,1.5rem)] leading-tight mb-3">What this is not</h2>
+        <p class="prose-body">
+          This is not a campaign, not fundraising, and not a sales call. Nothing is being sold.
+        </p>
+      </article>
+
+      <article>
+        <h2 class="font-serif text-[clamp(1.2rem,2.2vw,1.5rem)] leading-tight mb-3">Text messages</h2>
+        <p class="prose-body">
+          Reply STOP to any message you received to opt out.
+        </p>
+      </article>
+
+      <article>
+        <h2 class="font-serif text-[clamp(1.2rem,2.2vw,1.5rem)] leading-tight mb-3">Questions</h2>
+        <p class="prose-body">
+          Write to <a href="mailto:info@vernacularlabs.ai" class="text-terracotta hover:text-ember underline underline-offset-4 decoration-terracotta/30">info@vernacularlabs.ai</a>.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="container-site pb-16">
+    <div class="border-t border-fog/40 pt-8 max-w-2xl">
+      <p class="prose-body text-[15px] text-ash mb-2">Ready to take part?</p>
+      <a href={PHONE_HREF} class="btn-primary">Call {PHONE}</a>
+    </div>
+  </section>
+
+</Layout>
