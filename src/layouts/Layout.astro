@@ -5,11 +5,13 @@ import Footer from '../components/Footer.astro';
 
 interface Props {
   title?: string;
+  noindex?: boolean;
   description?: string;
 }
 const {
   title = 'Vernacular Labs',
   description = 'Using AI to understand real people. Vernacular Labs conducts AI-led voice interviews at scale, producing population-representative estimates of what communities think and why.',
+  noindex = false,
 } = Astro.props;
 const fullTitle = title === 'Vernacular Labs' ? title : `${title} — Vernacular Labs`;
 ---
@@ -19,6 +21,7 @@ const fullTitle = title === 'Vernacular Labs' ? title : `${title} — Vernacular
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
