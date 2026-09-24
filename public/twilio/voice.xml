@@ -2,5 +2,9 @@
 <!-- Inbound-call reply for the study number (855) 780-3700. Twilio fetches this with GET. -->
 <Response>
   <Pause length="1"/>
-  <Say voice="Polly.Joanna">You've reached Vernacular Labs. We use this number to call people who scheduled a research interview with us. If you have questions, please email info at vernacular labs dot A I. That's info at vernacular labs dot A I. Thank you.</Say>
+  <Say voice="Polly.Joanna">You've reached Vernacular Labs. We use this number to call people who scheduled a research interview with us. If you have questions, please email us at info at vernacular labs dot A I.</Say>
+  <Pause length="1"/>
+  <Say voice="Polly.Joanna"><prosody rate="slow">That's <say-as interpret-as="spell-out">info</say-as>, at, <say-as interpret-as="spell-out">vernacular</say-as>, <say-as interpret-as="spell-out">labs</say-as>, dot, <say-as interpret-as="spell-out">ai</say-as>.</prosody></Say>
+  <Pause length="1"/>
+  <Say voice="Polly.Joanna">Again, that's info at vernacular labs dot A I. Thank you.</Say>
 </Response>
