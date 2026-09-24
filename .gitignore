@@ -26,3 +26,6 @@ pnpm-debug.log*
 
 # FUSE filesystem temp files (deleted-but-open files on mounted filesystems)
 .fuse_hidden*
+
+# Local Netlify folder
+.netlify

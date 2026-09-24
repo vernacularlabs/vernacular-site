@@ -37,5 +37,4 @@
 [[headers]]
   for = "/twilio/*"
   [headers.values]
-    Content-Type = "text/xml; charset=utf-8"
     Cache-Control = "public, max-age=300"
