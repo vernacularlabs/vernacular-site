@@ -26,3 +26,15 @@
   for = "/images/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# /georgia-2026 was the unlisted info page for the earlier call-in pilot; retired 2026-09-24.
+[[redirects]]
+  from = "/georgia-2026"
+  to = "/"
+  status = 301
+
+# TwiML replies for the study toll-free number (see public/twilio/).
+[[headers]]
+  for = "/twilio/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"

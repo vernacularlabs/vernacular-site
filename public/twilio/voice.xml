@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Inbound-call reply for the study number (855) 780-3700. Twilio fetches this with GET. -->
+<Response>
+  <Pause length="1"/>
+  <Say voice="Polly.Joanna">You've reached Vernacular Labs. We use this number to call people who scheduled a research interview with us. If you have questions, please email info at vernacular labs dot A I. That's info at vernacular labs dot A I. Thank you.</Say>
+</Response>

@@ -55,4 +55,27 @@
     @apply w-full rounded-md border-fog/60 bg-white/70 px-4 py-3 text-coal
            placeholder:text-ash/70 focus:border-terracotta focus:ring-terracotta;
   }
+
+  /* Long-form legal pages (/privacy, /terms) */
+  .legal {
+    @apply max-w-prose text-[17px] leading-[1.7] text-coal;
+  }
+  .legal h2 {
+    @apply font-serif text-[clamp(1.4rem,2.4vw,1.85rem)] leading-tight mt-14;
+  }
+  .legal h3 {
+    @apply font-sans text-[17px] font-semibold text-ink mt-8 tracking-normal;
+  }
+  .legal p {
+    @apply mt-4;
+  }
+  .legal ul {
+    @apply mt-4 space-y-2 pl-5 list-disc marker:text-terracotta;
+  }
+  .legal a {
+    @apply text-terracotta hover:text-ember underline underline-offset-4 decoration-terracotta/30;
+  }
+  .legal strong {
+    @apply font-semibold text-ink;
+  }
 }

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Inbound-text auto-reply for the study number (855) 780-3700. STOP/HELP are handled by Twilio before this runs. -->
+<Response>
+  <Message>Vernacular Labs: this number sends confirmations and reminders for research calls you scheduled with us. Questions? Email info@vernacularlabs.ai. Reply STOP to opt out.</Message>
+</Response>
