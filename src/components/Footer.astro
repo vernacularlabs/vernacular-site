@@ -4,10 +4,12 @@ const year = new Date().getFullYear();
 <footer class="mt-24 border-t border-fog/30">
   <div class="container-site py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
     <p class="text-[14px] text-ash">
-      &copy; {year} Vernacular Labs. All rights reserved.
+      &copy; {year} Vernacular Labs LLC. All rights reserved.
     </p>
-    <p class="text-[14px] text-ash">
-      <a href="mailto:info@vernacularlabs.ai" class="hover:text-terracotta">info@vernacularlabs.ai</a>
-    </p>
+    <ul class="flex flex-wrap items-center gap-x-6 gap-y-2 text-[14px] text-ash">
+      <li><a href="/privacy" class="hover:text-terracotta">Privacy</a></li>
+      <li><a href="/terms" class="hover:text-terracotta">Terms</a></li>
+      <li><a href="mailto:info@vernacularlabs.ai" class="hover:text-terracotta">info@vernacularlabs.ai</a></li>
+    </ul>
   </div>
 </footer>
