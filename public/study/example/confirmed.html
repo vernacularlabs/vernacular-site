@@ -155,6 +155,12 @@ legend { padding: 0; }
 .opt:hover span { border-color: var(--vl-ash); }
 .opt input:checked + span { background: var(--vl-ink); border-color: var(--vl-ink); color: var(--color-on-ink); }
 .opt input:focus-visible + span { outline: 2px solid var(--vl-focus-ring); outline-offset: 2px; }
+.opt.current span { flex-direction: column; gap: 2px; border-width: 2px; border-color: var(--vl-ink); }
+.opt.current small { font-size: var(--text-sm); font-weight: 400; opacity: 0.8; }
+.consent-kept { padding: var(--space-4); border: 1px solid var(--vl-border-strong); border-radius: var(--radius-md); background: var(--vl-white); font-size: var(--text-md); line-height: 1.55; color: var(--color-text); margin-bottom: var(--space-6); }
+.consent-kept p { margin: 0; }
+.consent-kept details { margin-top: var(--space-2); }
+.consent-kept summary { cursor: pointer; color: var(--color-muted); text-decoration: underline; text-underline-offset: 4px; }
 .now { margin-bottom: var(--space-2); }
 .now span { justify-content: flex-start; gap: var(--space-3); padding: var(--space-3) var(--space-4); text-align: left; flex-direction: column; align-items: flex-start; white-space: normal; }
 .now small { font-weight: 400; font-size: var(--text-md); color: inherit; opacity: 0.8; }
@@ -244,7 +250,9 @@ footer p { margin: 0 0 var(--space-1); }
 
 
   <div class="actions">
+
     <a class="btn btn-secondary" href="index.html">Change time</a>
+
     <form action="#" method="post">
       <button class="btn btn-quiet" type="submit">Cancel my call</button>
     </form>

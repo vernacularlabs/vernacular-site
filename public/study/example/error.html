@@ -155,6 +155,12 @@ legend { padding: 0; }
 .opt:hover span { border-color: var(--vl-ash); }
 .opt input:checked + span { background: var(--vl-ink); border-color: var(--vl-ink); color: var(--color-on-ink); }
 .opt input:focus-visible + span { outline: 2px solid var(--vl-focus-ring); outline-offset: 2px; }
+.opt.current span { flex-direction: column; gap: 2px; border-width: 2px; border-color: var(--vl-ink); }
+.opt.current small { font-size: var(--text-sm); font-weight: 400; opacity: 0.8; }
+.consent-kept { padding: var(--space-4); border: 1px solid var(--vl-border-strong); border-radius: var(--radius-md); background: var(--vl-white); font-size: var(--text-md); line-height: 1.55; color: var(--color-text); margin-bottom: var(--space-6); }
+.consent-kept p { margin: 0; }
+.consent-kept details { margin-top: var(--space-2); }
+.consent-kept summary { cursor: pointer; color: var(--color-muted); text-decoration: underline; text-underline-offset: 4px; }
 .now { margin-bottom: var(--space-2); }
 .now span { justify-content: flex-start; gap: var(--space-3); padding: var(--space-3) var(--space-4); text-align: left; flex-direction: column; align-items: flex-start; white-space: normal; }
 .now small { font-weight: 400; font-size: var(--text-md); color: inherit; opacity: 0.8; }
@@ -267,7 +273,7 @@ footer p { margin: 0 0 var(--space-1); }
 
   <p class="eyebrow">Research study</p>
   <h1>Hi Alex, we’d like to hear from you.</h1>
-  <p class="lede">Vernacular Labs is a research group talking with voters about what matters to them. Pick a time and our interviewer will call you.</p>
+  <p class="lede">Vernacular Labs is a research group talking with voters about politics and the country right now. Pick a time and our interviewer will call you.</p>
   <ul class="facts" aria-label="About this study">
   <li><span class="dot" aria-hidden="true"></span><span><b>A phone conversation.</b> Our interviewer calls you at the time you choose.</span></li>
   <li><span class="dot" aria-hidden="true"></span><span><b>$50 honorarium</b> as a thank-you, sent by text to this phone: $10 shortly after the call starts, and $40 when the interview is done. The $40 usually arrives within minutes; if we need to manually verify the interview, it can take a day or two.</span></li>
@@ -292,12 +298,12 @@ footer p { margin: 0 0 var(--space-1); }
 
       <p class="day" id="day-1">Tuesday, October 6 <span class="zone">· Eastern Time</span></p>
       <div class="grid" role="group" aria-labelledby="day-1">
-        <label class="opt"><input type="radio" name="slot_id" value="01M3CXWSHT193CDTPQX31Z6D5C" aria-label="Tuesday, October 6 at 1:30 PM EDT" required checked><span>1:30 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3CXWSHTHDZ8KC3KXSJ7X41J" aria-label="Tuesday, October 6 at 2:00 PM EDT" required><span>2:00 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3CXWSHTYFJQ7DVZ24Z3HPHE" aria-label="Tuesday, October 6 at 2:30 PM EDT" required><span>2:30 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3CXWSHTQK81G8YVBM45Q153" aria-label="Tuesday, October 6 at 3:00 PM EDT" required><span>3:00 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3CXWSHTYP7VYCCZCY9488RG" aria-label="Tuesday, October 6 at 3:30 PM EDT" required><span>3:30 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3CXWSHVQDE5GV7SBRW5B1GH" aria-label="Tuesday, October 6 at 4:00 PM EDT" required><span>4:00 PM</span></label>
+        <label class="opt"><input type="radio" name="slot_id" value="01M3Q8GV54Z6ZKSTBE1K1ZZEPX" aria-label="Tuesday, October 6 at 1:30 PM EDT" required checked><span>1:30 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3Q8GV54QM8Z1GEG1354Q3TZ" aria-label="Tuesday, October 6 at 2:00 PM EDT" required><span>2:00 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3Q8GV55APK26GFC4RAK0034" aria-label="Tuesday, October 6 at 2:30 PM EDT" required><span>2:30 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3Q8GV55Q34QEJ5B76Y88RS1" aria-label="Tuesday, October 6 at 3:00 PM EDT" required><span>3:00 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3Q8GV55W5RPTPZQGW662S9G" aria-label="Tuesday, October 6 at 3:30 PM EDT" required><span>3:30 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3Q8GV55KKQEZEH6FP7HPQTS" aria-label="Tuesday, October 6 at 4:00 PM EDT" required><span>4:00 PM</span></label>
       </div>
   
       <details class="more">
         <summary>More times</summary>
-        <div class="grid" role="group" aria-labelledby="day-1"><label class="opt"><input type="radio" name="slot_id" value="01M3CXWSHV26NMV8EZCEXXHTJ1" aria-label="Tuesday, October 6 at 4:30 PM EDT" required><span>4:30 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3CXWSHVJSNPGDJF4RFF2EBG" aria-label="Tuesday, October 6 at 5:00 PM EDT" required><span>5:00 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3CXWSHVNCW914W7CDGTVF99" aria-label="Tuesday, October 6 at 5:30 PM EDT" required><span>5:30 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3CXWSHVC0RVSEJXN2PR247C" aria-label="Tuesday, October 6 at 6:00 PM EDT" required><span>6:00 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3CXWSHV7GFGSBC98VFPK2K5" aria-label="Tuesday, October 6 at 6:30 PM EDT" required><span>6:30 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3CXWSHW7ZPQQHBNCQ8BCJR6" aria-label="Tuesday, October 6 at 7:00 PM EDT" required><span>7:00 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3CXWSHW9CTZQT106WE69XA2" aria-label="Tuesday, October 6 at 7:30 PM EDT" required><span>7:30 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3CXWSHW5WVSR0DR5ENBY5X1" aria-label="Tuesday, October 6 at 8:00 PM EDT" required><span>8:00 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3CXWSHWEFMJV4THAJJBHH7T" aria-label="Tuesday, October 6 at 8:30 PM EDT" required><span>8:30 PM</span></label></div>
+        <div class="grid" role="group" aria-labelledby="day-1"><label class="opt"><input type="radio" name="slot_id" value="01M3Q8GV55V6CFJG4W1ZNR2ECY" aria-label="Tuesday, October 6 at 4:30 PM EDT" required><span>4:30 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3Q8GV56QC2F9RVB7W9XYGV2" aria-label="Tuesday, October 6 at 5:00 PM EDT" required><span>5:00 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3Q8GV569HCT6BVKBXN1160Z" aria-label="Tuesday, October 6 at 5:30 PM EDT" required><span>5:30 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3Q8GV566E56DRWQC710J3BS" aria-label="Tuesday, October 6 at 6:00 PM EDT" required><span>6:00 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3Q8GV56EY9RN2M846YBDBC6" aria-label="Tuesday, October 6 at 6:30 PM EDT" required><span>6:30 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3Q8GV572BH3TBY1NFZZ72Q0" aria-label="Tuesday, October 6 at 7:00 PM EDT" required><span>7:00 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3Q8GV57WPD9THTP201HQ59K" aria-label="Tuesday, October 6 at 7:30 PM EDT" required><span>7:30 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3Q8GV57M96ZAQ1H6WWHKETW" aria-label="Tuesday, October 6 at 8:00 PM EDT" required><span>8:00 PM</span></label><label class="opt"><input type="radio" name="slot_id" value="01M3Q8GV572DVTP428GD3AJH9E" aria-label="Tuesday, October 6 at 8:30 PM EDT" required><span>8:30 PM</span></label></div>
       </details>
   
 
@@ -309,10 +315,12 @@ footer p { margin: 0 0 var(--space-1); }
       <p class="fine" id="mobile-number-note">We’ll call and text this number, the one your invitation was sent to.</p>
     </div>
 
+
     <label class="consent">
       <input type="checkbox" name="consent" value="on" required>
       <span>I agree that Vernacular Labs may call me at the mobile number shown above for this research conversation, including calls that use an automated, AI-generated voice interviewer, and may send me text messages at that number about my call: a confirmation, reminders, and a new link if we miss you. Message frequency varies (usually 2 to 4 texts per booking). Message and data rates may apply. Reply STOP to opt out or HELP for help. My honorarium is sent by text to this same phone by our payment provider. <a href="https://vernacularlabs.ai/privacy" rel="noreferrer">Privacy policy</a>.</span>
     </label>
+
 
     <button class="btn" type="submit" data-selected-label="Book {time}">Book my call</button>
     <p class="fine">We’ll call from (855) 780-3700. You can change or cancel your time from the confirmation text.</p>
