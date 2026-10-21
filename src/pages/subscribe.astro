@@ -6,7 +6,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="grid md:grid-cols-12 gap-10 md:gap-16">
       <div class="md:col-span-5">
         <p class="eyebrow mb-4">Stay in the loop</p>
-        <h1 class="font-serif text-[clamp(2.25rem,5vw,3.5rem)] leading-[1.05] tracking-[-0.02em]">
+        <h1 class="font-heading text-h1">
           Join our surveys.
         </h1>
         <p class="prose-body mt-6">
@@ -24,7 +24,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="md:col-span-7">
         <form name="sms-optin" method="POST" action="/signed-up" data-netlify="true"
               netlify-honeypot="bot-field"
-              class="space-y-5 p-8 md:p-10 rounded-2xl bg-paper border border-fog/40">
+              class="space-y-5 p-8 md:p-10 rounded-card bg-paper border border-line shadow-card">
           <input type="hidden" name="form-name" value="sms-optin" />
           <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
           <div>
@@ -39,7 +39,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <div class="flex items-start gap-3 pt-1">
             <input id="consent" name="consent" type="checkbox" required
-                   class="mt-1 h-4 w-4 rounded border-fog/60 text-terracotta focus:ring-terracotta shrink-0" />
+                   class="mt-1 h-4 w-4 rounded-[3px] border-line-strong text-terracotta focus:ring-terracotta shrink-0" />
             <label for="consent" class="text-[14px] leading-[1.6] text-coal">
               I agree to receive recurring automated text messages from Vernacular Labs.
               Msg frequency varies. Reply STOP to cancel, HELP for help.

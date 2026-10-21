@@ -13,11 +13,13 @@ import Layout from '../layouts/Layout.astro';
         fetchpriority="high"
       />
       
-      <div class="absolute inset-x-0 top-0 h-[45%] bg-gradient-to-b from-ink/75 via-ink/35 to-transparent pointer-events-none"></div>
+      <div class="absolute inset-x-0 top-0 h-[45%] bg-gradient-to-b from-black/70 via-black/30 to-transparent pointer-events-none"></div>
+      <!-- blends the image's warm bottom edge into the page background -->
+      <div class="absolute inset-x-0 bottom-0 h-[16%] bg-gradient-to-b from-transparent to-cream pointer-events-none"></div>
       
       <div class="relative z-10 container-site pt-10 md:pt-16">
         <p class="eyebrow text-cream/85 mb-5">Vernacular Labs</p>
-        <h1 class="font-serif text-cream text-[clamp(2.25rem,5.2vw,4.75rem)] leading-[1.02] tracking-[-0.02em] max-w-5xl">
+        <h1 class="font-heading text-paper text-display max-w-5xl">
           Using AI to understand <em>real</em> people.
         </h1>
       </div>
@@ -32,7 +34,7 @@ import Layout from '../layouts/Layout.astro';
       <article class="grid md:grid-cols-12 gap-8 md:gap-12 items-center">
         <div class="md:col-span-6 order-2 md:order-1">
           <p class="eyebrow mb-3">What we do</p>
-          <h2 class="font-serif text-[clamp(1.75rem,3.2vw,2.5rem)] leading-tight mb-5">
+          <h2 class="font-heading text-h2 mb-5">
             AI voice agents that have real conversations &mdash; not surveys.
           </h2>
           <p class="prose-body mb-6">
@@ -47,7 +49,7 @@ import Layout from '../layouts/Layout.astro';
           <img
             src="/images/what-we-do-collage.jpg"
             alt="A four-panel grid of diverse people taking phone calls in different everyday settings"
-            class="w-full rounded-2xl shadow-[0_20px_60px_-30px_rgba(30,20,10,0.3)]"
+            class="w-full rounded-card shadow-photo"
             loading="lazy"
           />
         </div>
@@ -59,13 +61,13 @@ import Layout from '../layouts/Layout.astro';
           <img
             src="/images/why-it-matters-family.jpg"
             alt="A family outside their home in an everyday moment"
-            class="w-full rounded-2xl shadow-[0_20px_60px_-30px_rgba(30,20,10,0.3)]"
+            class="w-full rounded-card shadow-photo"
             loading="lazy"
           />
         </div>
         <div class="md:col-span-6">
           <p class="eyebrow mb-3">Why it matters</p>
-          <h2 class="font-serif text-[clamp(1.75rem,3.2vw,2.5rem)] leading-tight mb-5">
+          <h2 class="font-heading text-h2 mb-5">
             Real understanding begins with conversation.
           </h2>
           <p class="prose-body mb-6">
@@ -81,7 +83,7 @@ import Layout from '../layouts/Layout.astro';
       <article class="grid md:grid-cols-12 gap-8 md:gap-12 items-center">
         <div class="md:col-span-6 order-2 md:order-1">
           <p class="eyebrow mb-3">Who we are</p>
-          <h2 class="font-serif text-[clamp(1.75rem,3.2vw,2.5rem)] leading-tight mb-5">
+          <h2 class="font-heading text-h2 mb-5">
             Built by researchers who have been doing this work for years.
           </h2>
           <p class="prose-body mb-6">
@@ -95,7 +97,7 @@ import Layout from '../layouts/Layout.astro';
           <img
             src="/images/who-we-are-team.jpg"
             alt="A small, diverse team working together"
-            class="w-full rounded-2xl shadow-[0_20px_60px_-30px_rgba(30,20,10,0.3)]"
+            class="w-full rounded-card shadow-photo"
             loading="lazy"
           />
         </div>
@@ -106,15 +108,15 @@ import Layout from '../layouts/Layout.astro';
 
 
   <section class="container-site mt-24 md:mt-32 mb-24 md:mb-32">
-    <div class="bg-ink text-cream rounded-3xl px-8 md:px-16 py-16 md:py-20 text-center">
+    <div class="bg-ink text-cream rounded-card px-8 md:px-16 py-16 md:py-20 text-center">
       <p class="eyebrow text-cream/70 mb-4">Get in touch</p>
-      <h2 class="font-serif text-[clamp(1.75rem,3.2vw,2.75rem)] leading-tight mb-5 max-w-3xl mx-auto"><span class="block">Working on 2026 or 2028?</span><span class="block text-clay">Let&rsquo;s talk.</span></h2>
+      <h2 class="font-heading text-h2 text-paper mb-5 max-w-3xl mx-auto"><span class="block">Working on 2026 or 2028?</span><span class="block text-mist">Let&rsquo;s talk.</span></h2>
       <p class="text-cream/80 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
         We&rsquo;re running pilot projects with mission-aligned partners ahead of a broader launch.
         If you&rsquo;re working on 2026 or 2028 and want to understand your electorate differently,
         we want to hear from you.
       </p>
-      <a href="/contact" class="inline-flex items-center bg-cream text-ink px-6 py-3 rounded-full font-medium hover:bg-paper transition-colors">
+      <a href="/contact" class="inline-flex items-center bg-paper text-ink px-6 py-3 rounded-control font-semibold hover:bg-cream transition-colors">
         Contact us &rarr;
       </a>
     </div>

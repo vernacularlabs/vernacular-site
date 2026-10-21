@@ -7,22 +7,24 @@
 @layer base {
   html {
     @apply text-ink antialiased;
-    background-color: #FAF7F2;
+    background-color: theme('colors.cream');
   }
   body {
     @apply font-sans text-[17px] leading-relaxed text-coal;
-    background-color: #FAF7F2;
+    background-color: theme('colors.cream');
   }
   h1, h2, h3, h4 {
-    @apply font-serif text-ink tracking-[-0.01em];
-    font-feature-settings: "ss01", "ss02";
+    @apply font-heading font-semibold text-ink tracking-[-0.01em];
   }
   a {
     @apply transition-colors duration-150;
   }
+  a:focus-visible, button:focus-visible, summary:focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-terracotta rounded-[2px];
+  }
   ::selection {
-    background-color: #B54F2E;
-    color: #FAF7F2;
+    background-color: theme('colors.terracotta');
+    color: theme('colors.paper');
   }
 }
 
@@ -40,20 +42,20 @@
     @apply text-terracotta;
   }
   .eyebrow {
-    @apply font-sans text-[12px] uppercase tracking-[0.18em] text-ash;
+    @apply font-sans text-[12px] font-semibold uppercase tracking-[0.08em] text-ash;
   }
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-full bg-ink px-6 py-3
-           text-[15px] font-medium text-cream hover:bg-terracotta
-           transition-colors duration-200;
+    @apply inline-flex items-center justify-center rounded-control border border-terracotta
+           bg-terracotta px-6 py-3 text-[15px] font-semibold text-paper
+           hover:bg-ember hover:border-ember transition-colors duration-200;
   }
   .btn-ghost {
     @apply inline-flex items-center text-[15px] font-medium text-ink
            hover:text-terracotta underline underline-offset-4 decoration-fog;
   }
   .form-input {
-    @apply w-full rounded-md border-fog/60 bg-white/70 px-4 py-3 text-coal
-           placeholder:text-ash/70 focus:border-terracotta focus:ring-terracotta;
+    @apply w-full rounded-control border-line-strong bg-paper px-4 py-3 text-coal
+           placeholder:text-ash focus:border-terracotta focus:ring-terracotta;
   }
 
   /* Long-form legal pages (/privacy, /terms) */
@@ -61,7 +63,7 @@
     @apply max-w-prose text-[17px] leading-[1.7] text-coal;
   }
   .legal h2 {
-    @apply font-serif text-[clamp(1.4rem,2.4vw,1.85rem)] leading-tight mt-14;
+    @apply font-heading text-h3 mt-14;
   }
   .legal h3 {
     @apply font-sans text-[17px] font-semibold text-ink mt-8 tracking-normal;
