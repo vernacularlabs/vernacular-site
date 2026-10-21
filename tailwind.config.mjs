@@ -1,8 +1,10 @@
+import { palette } from './src/styles/palettes.mjs';
+
 /** @type {import('tailwindcss').Config} */
 // Design tokens for vernacularlabs.ai.
 // 2026-10-21 (site-research-restyle): reskinned from the warm cream/terracotta/serif look to the muted
-// "serious research" look shared with the recruit booking pages (recruit src/recruit/static/tokens.css).
-// Color NAMES are historical and kept so no page markup had to be renamed; the comments give each role.
+// "serious research" look shared with the recruit booking pages. Colours live in src/styles/palettes.mjs
+// (SITE_PALETTE=green|graphite at build time); this file holds type, radii and shadows.
 const heading = (size, lineHeight, letterSpacing = '-0.01em', fontWeight = '600') => [
   size,
   { lineHeight, letterSpacing, fontWeight },
@@ -12,21 +14,7 @@ export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
-      colors: {
-        cream: '#F4F5F7',      // page background: cool light gray
-        paper: '#FFFFFF',      // raised surfaces: cards, forms, menus
-        ink: '#1A2433',        // headings, strong text, dark panels: dark slate
-        coal: '#2B3442',       // body copy
-        ash: '#535D6B',        // secondary text, eyebrows
-        fog: '#AAB2BD',        // decorative hairlines and underlines
-        terracotta: '#1F4E79', // the one accent: deep blue (links, primary button, focus ring)
-        clay: '#4A6F96',       // lighter accent
-        ember: '#15385A',      // accent hover / pressed
-        mist: '#A9C4E2',       // accent for text on dark (ink) panels
-        line: '#DDE1E6',       // card edges, header/footer rules
-        'line-strong': '#838C9A', // form-control borders (>= 3:1 on white and page bg)
-        error: '#9B2226',
-      },
+      colors: palette(),
       fontFamily: {
         heading: ['"Inter"', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'Arial', 'sans-serif'],
         sans: ['"Inter"', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'Arial', 'sans-serif'],
@@ -48,8 +36,8 @@ export default {
         control: '4px',
       },
       boxShadow: {
-        card: '0 1px 2px rgba(26, 36, 51, 0.06)',
-        photo: '0 1px 2px rgba(26, 36, 51, 0.06), 0 12px 32px -20px rgba(26, 36, 51, 0.35)',
+        card: '0 1px 2px rgba(29, 31, 34, 0.06)',
+        photo: '0 1px 2px rgba(29, 31, 34, 0.06), 0 12px 32px -20px rgba(29, 31, 34, 0.35)',
       },
       maxWidth: {
         content: '1120px',
