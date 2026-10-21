@@ -1,10 +1,10 @@
-import { palette } from './src/styles/palettes.mjs';
+import { colors } from './src/styles/palettes.mjs';
 
 /** @type {import('tailwindcss').Config} */
 // Design tokens for vernacularlabs.ai.
 // 2026-10-21 (site-research-restyle): reskinned from the warm cream/terracotta/serif look to the muted
 // "serious research" look shared with the recruit booking pages. Colours live in src/styles/palettes.mjs
-// (SITE_PALETTE=green|graphite at build time); this file holds type, radii and shadows.
+// (approved green accent); this file holds type, radii and shadows.
 const heading = (size, lineHeight, letterSpacing = '-0.01em', fontWeight = '600') => [
   size,
   { lineHeight, letterSpacing, fontWeight },
@@ -14,7 +14,7 @@ export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
-      colors: palette(),
+      colors,
       fontFamily: {
         heading: ['"Inter"', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'Arial', 'sans-serif'],
         sans: ['"Inter"', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'Arial', 'sans-serif'],
